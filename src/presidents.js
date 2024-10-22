@@ -428,7 +428,6 @@ function getNames(presidentsArr) {
 
 
 
-console.log(presidents[3].party)
 // Iteration 2 | Democratic Presidents - `filter()`
 function getDemocraticPresidents(presidentsArr) {
   const democatricPresidents = presidentsArr.filter((president)=> president.party == "Democratic")
@@ -500,10 +499,17 @@ function getPresidentsBornAfter(presidentsArr, year) {
 } 
 
 // Bonus: Iteration 7 | Count Republican Presidents
-function countRepublicanPresidents(presidentsArr) {}
+function countRepublicanPresidents(presidentsArr) {
 
+  const republicanPresidents = presidentsArr.reduce((acc, cur)=>{
+    if(cur.party === "Republican"){
+      return acc += 1
+    } 
+    return +acc
+  }, 0)  
 
-
+  return republicanPresidents
+}
 
 // Bonus: Iteration 8 | Sort Presidents by Name - `sort()`
 function sortPresidentsByName(presidentsArr) {}
