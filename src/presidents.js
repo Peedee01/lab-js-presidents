@@ -1,3 +1,5 @@
+console.clear()
+
 const presidents = [
   {
     id: 1,
@@ -415,9 +417,6 @@ const presidents = [
   }
 ];
 
-
-
-
 // Iteration 1 | Names of All Presidents - `map()`
 function getNames(presidentsArr) {
   const presidentsNames = presidentsArr.map((president) => {
@@ -425,13 +424,17 @@ function getNames(presidentsArr) {
   }) 
   return presidentsNames
 } 
-console.log(getNames(presidents))
+//console.log(getNames(presidents))
 
 
 
-
+console.log(presidents[3].party)
 // Iteration 2 | Democratic Presidents - `filter()`
-function getDemocraticPresidents(presidentsArr) {}
+function getDemocraticPresidents(presidentsArr) {
+  const democatricPresidents = presidentsArr.filter((president)=> president.party == "Democratic")
+
+  return democatricPresidents
+}
 
 
 
